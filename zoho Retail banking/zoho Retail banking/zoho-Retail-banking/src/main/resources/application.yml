@@ -1,0 +1,31 @@
+spring:
+    datasource:
+#        url: jdbc:postgresql://localhost:5432/userDB
+        url: jdbc:mysql://localhost:3306/userdb
+        username: root
+        password: vishal@sql
+#        driver-class-name: org.postgresql.Driver
+
+    jpa:
+        hibernate:
+            ddl-auto: update
+#        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
+                dialect: org.hibernate.dialect.MySQLDialect
+#        database: postgresql
+#        database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+logging:
+    level:
+      org.hibernate.sql: debug
+      org.springframework.security: debug
+#spring.datasource.url=jdbc:postgres://localhost:5432/postgres
+#spring.datasource.username=postgres
+#spring.datasource.password=Clashofcla1
+#
+#
+##spring.jpa.properties.hibernate,dialect=org.hibernate.dialect.PostgreSQLDialect
+#spring.jpa.hibernate.ddl-auto=create-drop
